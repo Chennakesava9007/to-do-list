@@ -1,0 +1,93 @@
+/* Reset default margin and padding */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f9;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode styling */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Auth form and application container */
+#auth-container, #app-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+body.dark-mode #auth-container,
+body.dark-mode #app-container {
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+/* Input fields and buttons */
+input[type="text"], input[type="password"], input[type="datetime-local"], select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #d1d1d1;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="datetime-local"]:focus, select:focus {
+    border-color: #007BFF;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #007BFF;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+button:active {
+    background-color: #003f7f;
+    transform: scale(0.98);
+}
+
+/* Dark mode input and button styling */
+body.dark-mode input[type="text"], 
+body.dark-mode input[type="password"], 
+body.dark-mode input[type="datetime-local"], 
+body.dark-mode select,
+body.dark-mode button {
+    background-color: #333;
+    color: white;
+    border: 1px solid #555;
+}
+
+body.dark-mode input[type="text"]:focus, 
+body.dark-mode input[type="password"]:focus, 
+body.dark-mode input[type="datetime-local"]:focus, 
+body.dark-mode select:focus {
+    border-color: #888;
+    background-color: #444;
+    box-shadow: none; /* Remove the blue glow for dark mode */
+}
